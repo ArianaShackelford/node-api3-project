@@ -20,7 +20,7 @@ router.put('/:id', (req, res) => {
 
 // custom middleware
 
-function validatePost(req, res, next) {
+function validatePostId(req, res, next) {
   if(req.body === 0 ){
     res.status(400).json({message : "missing post data"})
   }else if(!req.body.text){
